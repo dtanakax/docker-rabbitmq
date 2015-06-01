@@ -14,7 +14,7 @@ RUN groupadd -r rabbitmq && useradd -r -d /var/lib/rabbitmq -m -g rabbitmq rabbi
 RUN apt-key adv --keyserver pool.sks-keyservers.net --recv-keys F78372A06FF50C80464FC1B4F7B8CEA6056E8E56
 RUN echo 'deb http://www.rabbitmq.com/debian/ testing main' > /etc/apt/sources.list.d/rabbitmq.list
 
-ENV RABBITMQ_VERSION 3.5.2-1
+ENV RABBITMQ_VERSION 3.5.3-1
 
 RUN apt-get -y update && \
     apt-get install -y rabbitmq-server=$RABBITMQ_VERSION && \
